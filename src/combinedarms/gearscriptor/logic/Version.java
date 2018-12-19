@@ -1,31 +1,31 @@
 package combinedarms.gearscriptor.logic;
 
 public class Version {
-	private ReleaseInfo releaseinfo;
-	private LicenseInfo licenseinfo;
+	private ReleaseInfo releaseInfo;
+	private LicenseInfo licenseInfo;
 	
 	public Version() {
 		
 	}
 
-	public ReleaseInfo getReleaseinfo() {
-		return releaseinfo;
+	public ReleaseInfo getReleaseInfo() {
+		return releaseInfo;
 	}
 
-	public void setReleaseinfo(ReleaseInfo releaseinfo) {
-		this.releaseinfo = releaseinfo;
+	public void setReleaseinfo(ReleaseInfo releaseInfo) {
+		this.releaseInfo = releaseInfo;
 	}
 
 	public LicenseInfo getLicenseinfo() {
-		return licenseinfo;
+		return licenseInfo;
 	}
 
-	public void setLicenseinfo(LicenseInfo licenseinfo) {
-		this.licenseinfo = licenseinfo;
+	public void setLicenseinfo(LicenseInfo licenseInfo) {
+		this.licenseInfo = licenseInfo;
 	}
 	
 	public String getMajorMinorFromRelease(){
-	    return this.getReleaseinfo().getMajorversion() + "." + this.getReleaseinfo().getMinorversion();
+	    return this.getReleaseInfo().getMajorVersion() + "." + this.getReleaseInfo().getMinorVersion();
 	}
 	
 }

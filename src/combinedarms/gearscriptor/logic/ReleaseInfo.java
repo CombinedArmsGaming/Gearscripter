@@ -1,8 +1,8 @@
 package combinedarms.gearscriptor.logic;
 
 public class ReleaseInfo {
-	private String majorversion;
-	private String minorversion;
+	private String majorVersion;
+	private String minorVersion;
 	private String url;
 	
 	
@@ -11,20 +11,20 @@ public class ReleaseInfo {
 	}
 	
 	
-	public String getMajorversion() {
-		return majorversion;
+	public String getMajorVersion() {
+		return majorVersion;
 	}
 
-	public void setMajorversion(String majorversion) {
-		this.majorversion = majorversion;
+	public void setMajorVersion(String majorVersion) {
+		this.majorVersion = majorVersion;
 	}
 
-	public String getMinorversion() {
-		return minorversion;
+	public String getMinorVersion() {
+		return minorVersion;
 	}
 
-	public void setMinorversion(String minorversion) {
-		this.minorversion = minorversion;
+	public void setMinorVersion(String minorVersion) {
+		this.minorVersion = minorVersion;
 	}
 
 	public String getUrl() {

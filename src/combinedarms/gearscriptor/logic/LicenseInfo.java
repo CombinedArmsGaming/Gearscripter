@@ -1,7 +1,7 @@
 package combinedarms.gearscriptor.logic;
 
 public class LicenseInfo {
-	private String licensetype;
+	private String licenseType;
 	private String url;
 	
 	public LicenseInfo() {
@@ -9,11 +9,11 @@ public class LicenseInfo {
 	}
 
 	public String getLicensetype() {
-		return licensetype;
+		return licenseType;
 	}
 
-	public void setLicensetype(String licensetype) {
-		this.licensetype = licensetype;
+	public void setLicensetype(String licenseType) {
+		this.licenseType = licenseType;
 	}
 
 	public String getUrl() {
