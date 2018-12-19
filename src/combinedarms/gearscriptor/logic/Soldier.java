@@ -3,7 +3,6 @@ package combinedarms.gearscriptor.logic;
 import com.google.common.collect.Multimap;
 
 //Represents a soldier with gear, contains methods responsible for calling data access functionality to load or save the soldier in a database
-
 public class Soldier
 {
 	private String name;
@@ -34,7 +33,23 @@ public class Soldier
 		this.ancillaryEquipment = ancillaryEquipment;
 	}
 	
+	//Calls the data access commit to database functionality
+	public void commitToDatabase()
+	{
+		//TODO
+	}
 	
+	//Calls the data access remove from database functionality
+	public void removeFromDatabase()
+	{
+		//TODO
+	}
+	
+	//Calls the data access update in database functionality
+	public void updateInDatabse()
+	{
+		//TODO
+	}
 	
 	@Override
 	public String toString()

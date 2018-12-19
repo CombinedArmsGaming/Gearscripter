@@ -5,6 +5,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class AceArmouryCodeParser
@@ -22,10 +23,10 @@ public class AceArmouryCodeParser
 						System.out.println(test);
 				});*/
 		
-		unpackObjects(input, "");
+		parseObjects(input, "");
 	}
 	
-	public static void unpackObjects(String input, String indent)
+	public static void parseObjects(String input, String indent)
 	{
 		ArrayList<String> aceObjectList = new ArrayList<>();
 		int leftBrackets = 0;
@@ -52,7 +53,6 @@ public class AceArmouryCodeParser
 			if(leftBrackets == rightBrackets && inObject)
 			{
 				aceObjectList.add(indent + input.substring(start, i+1));
-				//System.out.println(input.substring(start, i+1));
 				start = 0;
 				leftBrackets = 0;
 				rightBrackets = 0;
@@ -60,12 +60,26 @@ public class AceArmouryCodeParser
 			}
 		}
 		
-		aceObjectList.forEach((aceObject) -> 
+		for(int i = 0; i < aceObjectList.size(); i++)
 		{
-			String displayObject = aceObject;//.replaceAll("\\[", "").replaceAll("\\]", "");
+			switch (i)
+			{
+				case 0:  
+			}
+		}
+		
+		/*aceObjectList.forEach((aceObject) -> 
+		{
+			String displayObject = aceObject;
 			String futherIndent = indent + "   ";
 			System.out.println(indent + displayObject);
-			unpackObjects(aceObject, futherIndent);
-		});
+			parseObjects(aceObject, futherIndent);
+		});*/
+	}
+
+	public static List<String> seperateAceObjects(String input)
+	{
+		ArrayList<String> list = new ArrayList<>();
+		return list;
 	}
 }
