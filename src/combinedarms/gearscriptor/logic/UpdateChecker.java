@@ -20,7 +20,7 @@ import com.google.gson.JsonSyntaxException;
 			e.printStackTrace();
 		}
  * 
- * This will print out "true"
+ * This will print out "true" if both Major and Minor versions match from local and online version files.
  * No idea why it needs the try catch block just let Baird know if its an issue. 
  */
 
