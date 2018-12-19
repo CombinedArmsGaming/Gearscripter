@@ -1,47 +1,38 @@
 package combinedarms.gearscriptor.logic;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+
+/*This class checks the local version in "./src/combinedarms/gearscriptor/logic/version.json" against the online version at "http://combinedarms.co.uk/gearscripter/gslicense.json"
+ *and outputs a boolean for future use in the UI side of things.
+ *
+ * Example of calling this class
+ * try {
+			System.out.println(UpdateChecker.checkForUpdate());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+ * 
+ * This will print out "true"
+ * No idea why it needs the try catch block just let Baird know if its an issue. 
+ */
 
 public class UpdateChecker {
 	
-	public static void main(String Args[]) {
-	/*	try (Reader reader = new FileReader("./src/combinedarms/gearscriptor/logic/version.json"))
-        {
-            Gson gson = new Gson();
-            Version[] version = gson.fromJson(reader, Version[].class);
-            System.out.println(version[0].getMajorMinorFromRelease());
-        }
-        catch
-        (Exception e)
-        {
-            System.out.println(e.getStackTrace().toString());
-        }*/
-		
-		try {
-			System.out.println(checkForUpdate(retrieveVersion()));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
-	
 	/* Compares the online and local versions*/
-	public static boolean checkForUpdate(String onlineVersion) throws FileNotFoundException {
+	public static boolean checkForUpdate() throws JsonSyntaxException, Exception {
 		boolean isUpToDate = false;
 		Reader reader = new FileReader("./src/combinedarms/gearscriptor/logic/version.json");
 		Gson gson = new Gson();
 		Version[] versionLocal = gson.fromJson(reader, Version[].class);
-		Version[] versionOnline = gson.fromJson(onlineVersion, Version[].class);
+		Version[] versionOnline = gson.fromJson(retrieveVersion(), Version[].class);
 		
 	
 		
@@ -53,9 +44,10 @@ public class UpdateChecker {
 	}
 	
 	
-	/*Retrieves string of json file from http://combinedarms.co.uk/gearscripter/gslicense.json */
+	/*Retrieves string of json file from http://combinedarms.co.uk/gearscripter/gslicense.json*/
 	public static String retrieveVersion() throws Exception{
 		BufferedReader reader = null;
+		
 		try {
 			URL url = new URL("http://combinedarms.co.uk/gearscripter/gslicense.json");
 			reader = new BufferedReader(new InputStreamReader(url.openStream()));
