@@ -4,16 +4,12 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class DirectoryManagement {
-	/* This class has one method that should be called from outside of it and thats findMissions.
+	/* This class has two methods that should be called from outside of it, findMissions and .
 	 * findMissions returns an ArrayList<String> that contains the full file path for every mission.sqm folder in the supplied initialProfilePath
 	 * initialProfilePath should always be the users arma 3 profile that they are currently using
 	 * 
 	 */
 	
-	public static void main(String Args[]) {
-		System.out.println(findMissions("C:\\Users\\Jonathan\\Documents\\Arma 3 - Other Profiles\\Baird,"));
-		System.out.println(showMissionFolders(findMissions("C:\\Users\\Jonathan\\Documents\\Arma 3 - Other Profiles\\Baird,")));
-	}
 	
 	//Starts of and returns the missionList ArrayList
 	public static ArrayList<String> findMissions(String intialProfilePath) {
