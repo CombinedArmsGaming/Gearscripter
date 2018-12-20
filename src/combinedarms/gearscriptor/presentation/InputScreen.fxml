@@ -7,7 +7,7 @@
 
 <AnchorPane id="1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="combinedarms.gearscriptor.presentation.InputScreen">
    <children>
-      <TextArea fx:id="submitCodeTextField" layoutX="296.0" layoutY="31.0" onMouseEntered="#hoverOnTextBox" prefHeight="323.0" prefWidth="290.0" />
+      <TextArea fx:id="submitCodeTextField" layoutX="296.0" layoutY="32.0" onMouseEntered="#hoverOnTextBox" prefHeight="322.0" prefWidth="290.0" />
       <Button fx:id="buttonMain" layoutX="532.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonMainClicked" text="Submit" />
       <TextField fx:id="unitRoleBox" layoutX="113.0" layoutY="78.0" onMouseEntered="#hoverOnRoleBox" />
       <Text layoutX="20.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Name/Role" />
