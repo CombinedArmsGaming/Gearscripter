@@ -11,20 +11,20 @@ public class DirectoryManagement {
 	
 	public static ArrayList<String> findMissions(String intialProfilePath) {
 		File[] files = new File(intialProfilePath).listFiles();
-		System.out.println(showFiles(files));
-		return null;
+		ArrayList<String> missionList = new ArrayList<String>();
+		showFiles(files, missionList);
+		return missionList;
 	}
 	
-	public static ArrayList<String> showFiles(File[] files) {
-		ArrayList<String> missionList = new ArrayList<String>();
+	public static ArrayList<String> showFiles(File[] files, ArrayList<String> missionList) {
 		for (File file : files) {
 			if (file.isDirectory()) {
-				showFiles(file.listFiles());
+				showFiles(file.listFiles(), missionList);
 			} else if(file.getName().equals("mission.sqm")){
 				missionList.add(file.getPath());
+				
 			}
 		}
-		System.out.println(missionList);
 		return missionList;
 	}
 }
