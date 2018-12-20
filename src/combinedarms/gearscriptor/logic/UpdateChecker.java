@@ -9,30 +9,34 @@ import java.net.URL;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-/*This class checks the local version in "./src/combinedarms/gearscriptor/logic/version.json" against the online version at "http://combinedarms.co.uk/gearscripter/gslicense.json"
- *and outputs a boolean for future use in the UI side of things.
+/* Inputs checkedAgainst: String of a JSON file with version info, String localVersionPath: This is the path of the local version JSON file
+ * Local JSON file should be "./src/combinedarms/gearscriptor/logic/version.json" unless changed at somepoint
+ * 
+ * This class checks the local version in "./src/combinedarms/gearscriptor/tests/version.json" against the string provided. 
+ *You can call retrieveVersion() as well in order to get the version from online to check against.
+ *It outputs a boolean based on whether or not the getMajorMinorFromRelease are identical.
  *
  * Example of calling this class
  * try {
-			System.out.println(UpdateChecker.checkForUpdate());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+ *			System.out.println(UpdateChecker.checkForUpdate(retrieveVersion()));
+ *		} catch (Exception e) {
+ *			// TODO Auto-generated catch block
+ *			e.printStackTrace();
+ *		}
  * 
- * This will print out "true" if both Major and Minor versions match from local and online version files.
+ * This will print out "true" if both Major and Minor versions match from local and the checked against version files.
  * No idea why it needs the try catch block just let Baird know if its an issue. 
  */
 
 public class UpdateChecker {
 	
 	/* Compares the online and local versions*/
-	public static boolean checkForUpdate() throws JsonSyntaxException, Exception {
+	public static boolean checkForUpdate(String checkedAgainst, String localVersionPath) throws JsonSyntaxException, Exception {
 		boolean isUpToDate = false;
-		Reader reader = new FileReader("./src/combinedarms/gearscriptor/logic/version.json");
+		Reader reader = new FileReader(localVersionPath);
 		Gson gson = new Gson();
 		Version[] versionLocal = gson.fromJson(reader, Version[].class);
-		Version[] versionOnline = gson.fromJson(retrieveVersion(), Version[].class);
+		Version[] versionOnline = gson.fromJson(checkedAgainst, Version[].class);
 		
 	
 		
