@@ -29,11 +29,14 @@ public class DirectoryManagementTests {
 	
 	@Test
 	void showMissionFoldersTests() {
+		ArrayList<String> expectedTooShort = new ArrayList<String>();
 		ArrayList<String> expectedNotNull = new ArrayList<String>();
 		ArrayList<String> expectedNull = new ArrayList<String>();
 		expectedNotNull.add("./src/combinedarms/gearscriptor/tests/mission.sqm");
+		expectedTooShort.add("aa");
 		
 		assertNull(DirectoryManagement.showMissionFolders(expectedNull));
+		assertEquals(expectedTooShort,DirectoryManagement.showMissionFolders(expectedTooShort));
 		assertNotNull(DirectoryManagement.showMissionFolders(expectedNotNull));
 		
 	}

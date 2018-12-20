@@ -42,18 +42,25 @@ public class DirectoryManagement {
 	//Strips the last 12 chars from the given strings in the provided ArrayList<String>
 	public static ArrayList<String> showMissionFolders(ArrayList<String> missionList) {
 		
+		
 		if(missionList.size() > 0) {
 			
 			for (int i = 0; i < missionList.size(); i++) {
 				StringBuilder sb = new StringBuilder(missionList.get(i));
-				for(int j = (missionList.get(i).length()-1); j > (missionList.get(i).length()-13); j--) {
-					sb.deleteCharAt(j);
+				//Handles exceptions when given index is less than 13 chars, which should never happen, and avoids an out of bounds exception
+				if(missionList.get(i).length() > 13) {
+				
+					for(int j = (missionList.get(i).length()-1); j > (missionList.get(i).length()-13); j--) {
+						sb.deleteCharAt(j);
+				
+					}
+					
 				}
 				missionList.set(i, sb.toString());
 			}
 			return missionList;
-		
+		} else {
+			return null;
 		}
-		return null;
 	}
 }
