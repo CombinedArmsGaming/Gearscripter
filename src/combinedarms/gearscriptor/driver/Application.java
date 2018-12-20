@@ -20,7 +20,7 @@ public class Application extends javafx.application.Application
 	@Override
 	public void start(Stage stage) throws Exception {
 		//get the FXML file for this page 
-		Parent root = FXMLLoader.load(getClass().getResource("../presentation/mainScreen.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../presentation/InputScreen.fxml"));
         //Set Title
         stage.setTitle("CombinedArms GearScriptor");
         //Create new scene
