@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="combinedarms.gearscriptor.presentation.LoginScreen">
    <children>
       <Text layoutX="171.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
@@ -13,6 +12,6 @@
       <TextField layoutX="230.0" layoutY="137.0" />
       <PasswordField layoutX="230.0" layoutY="183.0" />
       <Button layoutX="278.0" layoutY="238.0" mnemonicParsing="false" onAction="#login" text="Login" />
-      <Button layoutX="443.0" layoutY="361.0" mnemonicParsing="false" text="Continue Without Login" />
+      <Button layoutX="443.0" layoutY="361.0" mnemonicParsing="false" onAction="#continueWithoutLogin" text="Continue Without Login" />
    </children>
 </AnchorPane>

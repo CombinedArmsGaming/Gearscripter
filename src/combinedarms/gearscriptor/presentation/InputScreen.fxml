@@ -11,6 +11,7 @@
       <Button fx:id="buttonMain" layoutX="532.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonMainClicked" text="Submit" />
       <TextField fx:id="unitRoleBox" layoutX="113.0" layoutY="78.0" onMouseEntered="#hoverOnRoleBox" />
       <Text layoutX="20.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Name/Role" />
+      <TextArea fx:id="outputTextField" editable="false" layoutX="13.0" layoutY="259.0" onMouseEntered="#hoverOnOutputBox" prefHeight="127.0" prefWidth="264.0" />
       <MenuBar prefHeight="25.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
@@ -31,5 +32,9 @@
         </menus>
       </MenuBar>
       <Separator layoutX="285.0" layoutY="25.0" orientation="VERTICAL" prefHeight="375.0" prefWidth="11.0" />
+      <Text fill="RED" layoutX="14.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output Log" />
+      <Button fx:id="ClearLogButton" layoutX="207.0" layoutY="233.0" mnemonicParsing="false" onAction="#clearOutputBox" text="Clear Log" />
+      <Button layoutX="93.0" layoutY="146.0" mnemonicParsing="false" onAction="#viewSubmittedUnits" text="Button" />
+      <Button layoutX="181.0" layoutY="146.0" mnemonicParsing="false" onAction="#logOut" text="LogOut" />
    </children>
 </AnchorPane>

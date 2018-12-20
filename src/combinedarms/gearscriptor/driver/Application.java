@@ -9,9 +9,6 @@ import javafx.stage.Stage;
 
 public class Application extends javafx.application.Application 
 {
-	Label lb_text;
-	Button btn_click;
-	
 	public static void main(String[] args)
 	{
 		launch(args);
@@ -22,7 +19,7 @@ public class Application extends javafx.application.Application
 		//get the FXML file for this page 
 		Parent root = FXMLLoader.load(getClass().getResource("../presentation/LoginScreen.fxml"));
         //Set Title
-        stage.setTitle("CombinedArms GearScriptor");
+        stage.setTitle("CombinedArms GearScripter");
         //Create new scene
         stage.setScene(new Scene(root));
         //Screen is not resizable

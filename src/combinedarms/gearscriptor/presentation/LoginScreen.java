@@ -13,15 +13,20 @@ public class LoginScreen
 	public void login(ActionEvent event) throws IOException 
 	{  
 		//TODO add login stuff properly
+	}
+	
+	public void continueWithoutLogin(ActionEvent event) throws IOException 
+	{
 		try {
+			((Node)(event.getSource())).getScene().getWindow().hide();
 	        FXMLLoader fxmlLoader = new FXMLLoader();
 	        fxmlLoader.setLocation(getClass().getResource("../presentation/InputScreen.fxml"));
 	        Scene scene = new Scene(fxmlLoader.load());
 	        Stage stage = new Stage();
 	        stage.setTitle("New Window");
 	        stage.setScene(scene);
+	        stage.setResizable(false);
 	        stage.show();
-	        ((Node)(event.getSource())).getScene().getWindow().hide();
 	    } catch (IOException e) { }
 	}
 }
