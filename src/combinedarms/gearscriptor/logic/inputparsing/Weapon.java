@@ -1,4 +1,4 @@
-package combinedarms.gearscriptor.logic;
+package combinedarms.gearscriptor.logic.inputparsing;
 
 public class Weapon
 {

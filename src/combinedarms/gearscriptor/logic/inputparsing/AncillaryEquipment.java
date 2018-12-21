@@ -1,12 +1,12 @@
-package combinedarms.gearscriptor.logic;
+package combinedarms.gearscriptor.logic.inputparsing;
 
 public class AncillaryEquipment
 {
 	private String map, gpsTerminal, radio, compass, watch, nvgs;
 	
-	public AncillaryEquipment(String map, String gpsTerminal, String radio, String watch, String nvgs)
+	public AncillaryEquipment(String map, String gpsTerminal, String radio, String compass, String watch, String nvgs)
 	{
-		this.setCompass(nvgs);
+		this.setCompass(compass);
 		this.setGpsTerminal(gpsTerminal);
 		this.setMap(map);
 		this.setNvgs(nvgs);
