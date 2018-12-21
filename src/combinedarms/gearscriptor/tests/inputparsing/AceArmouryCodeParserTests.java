@@ -11,9 +11,9 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+import combinedarms.gearscriptor.logic.dataobject.KeyCountTriple;
+import combinedarms.gearscriptor.logic.dataobject.Loadout;
 import combinedarms.gearscriptor.logic.inputparsing.AceArmouryCodeParser;
-import combinedarms.gearscriptor.logic.inputparsing.KeyCountTriple;
-import combinedarms.gearscriptor.logic.inputparsing.Loadout;
 
 class AceArmouryCodeParserTests
 {

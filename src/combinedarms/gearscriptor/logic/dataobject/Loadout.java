@@ -1,4 +1,4 @@
-package combinedarms.gearscriptor.logic.inputparsing;
+package combinedarms.gearscriptor.logic.dataobject;
 
 import com.google.common.collect.Multimap;
 

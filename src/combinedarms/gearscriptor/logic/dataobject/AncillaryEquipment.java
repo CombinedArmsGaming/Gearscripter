@@ -1,4 +1,4 @@
-package combinedarms.gearscriptor.logic.inputparsing;
+package combinedarms.gearscriptor.logic.dataobject;
 
 public class AncillaryEquipment
 {

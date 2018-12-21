@@ -5,6 +5,11 @@ import java.util.Arrays;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+import combinedarms.gearscriptor.logic.dataobject.AncillaryEquipment;
+import combinedarms.gearscriptor.logic.dataobject.KeyCountTriple;
+import combinedarms.gearscriptor.logic.dataobject.Loadout;
+import combinedarms.gearscriptor.logic.dataobject.Weapon;
+
 public class AceArmouryCodeParser
 {
 	//Entry point, takes in an ACE armoury export and returns a Loadout object
