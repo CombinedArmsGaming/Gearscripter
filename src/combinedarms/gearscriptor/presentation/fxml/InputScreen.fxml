@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="combinedarms.gearscriptor.presentation.InputScreen">
+   <children>
+      <TextArea fx:id="submitCodeTextField" layoutX="496.0" layoutY="119.0" onMouseEntered="#hoverOnTextBox" prefHeight="322.0" prefWidth="290.0" />
+      <Button fx:id="buttonMain" layoutX="732.0" layoutY="561.0" mnemonicParsing="false" onAction="#buttonMainClicked" text="Submit" />
+      <TextField fx:id="unitRoleBox" layoutX="496.0" layoutY="59.0" onMouseEntered="#hoverOnRoleBox" />
+      <Text layoutX="496.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Name/Role" />
+      <TextArea fx:id="outputTextField" editable="false" layoutX="13.0" layoutY="458.0" onMouseEntered="#hoverOnOutputBox" prefHeight="127.0" prefWidth="264.0" />
+      <Text fill="RED" layoutX="13.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output Log" />
+      <Button fx:id="ClearLogButton" layoutX="283.0" layoutY="561.0" mnemonicParsing="false" onAction="#clearOutputBox" text="Clear Log" />
+      <Button layoutX="93.0" layoutY="146.0" mnemonicParsing="false" onAction="#viewSubmittedUnits" text="Button" />
+      <Button layoutX="731.0" layoutY="18.0" mnemonicParsing="false" onAction="#logOut" text="LogOut" />
+      <Text layoutX="496.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description (Optional)" />
+      <Text layoutX="496.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arsenal Code (Required)" />
+      <TextArea layoutX="496.0" layoutY="471.0" prefHeight="86.0" prefWidth="290.0" />
+   </children>
+</AnchorPane>
