@@ -135,5 +135,5 @@ public class Loadout
 	public void setAncillaryEquipment(AncillaryEquipment ancillaryEquipment)
 	{
 		this.ancillaryEquipment = ancillaryEquipment;
-	}	
+	}
 }
