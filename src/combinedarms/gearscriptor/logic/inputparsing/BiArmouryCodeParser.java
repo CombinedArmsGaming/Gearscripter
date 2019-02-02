@@ -10,6 +10,11 @@ import java.util.stream.Collectors;
 
 import combinedarms.gearscriptor.logic.dataobject.Loadout;
 
+/**
+ * Logic not done, up for changing in future
+ * @author Valh
+ *
+ */
 public class BiArmouryCodeParser
 {		
 	public static void main(String[] args) throws IOException
