@@ -54,7 +54,7 @@ public class InputScreen
 	}
 	
 	//Error box, takes a string as argument and then displays it on screen 
-	public void popUpErrorBox(String error)
+	private void popUpErrorBox(String error)
 	{
 		Alert alert = new Alert(AlertType.ERROR, error, ButtonType.OK);
 		alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
@@ -62,6 +62,7 @@ public class InputScreen
 	    alert.showAndWait();
 	}
 	
+	//Clears the log box
 	public void clearOutputBox()
 	{
 		outputTextField.setEditable(true);
@@ -88,6 +89,7 @@ public class InputScreen
 	    }
 	}
 	
+	//Return to login screen
 	public void logOut(ActionEvent event) throws IOException
 	{
 		try {		

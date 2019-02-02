@@ -45,7 +45,8 @@ public class Application extends javafx.application.Application
 	        		" FACEWEAR					 	TEXT, " +
 	        		" UNIFORMITEMS					TEXT, " +
 	        		" VESTITEMS						TEXT, " +
-	        		" BACKPACKITEMS			 		TEXT)"; 
+	        		" BACKPACKITEMS			 		TEXT, " + 
+	        		" ARSENALCODE					TEXT)"; 
 	        	stmt.executeUpdate(sql);
 	        	stmt.close();
 	        	c.close();
@@ -53,7 +54,6 @@ public class Application extends javafx.application.Application
 				System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 				System.exit(0);
 			}
-		System.out.println("Opened database successfully");
 	}
 	
 	//Returns a db connection
